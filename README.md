@@ -18,7 +18,7 @@ A Python package for integrating with the UnitedPayment API, allowing easy acces
 You can install the package via pip. Run the following command:
 
 ```bash
-pip install united-payment
+pip install united_payment
 ```
 
 ## Usage

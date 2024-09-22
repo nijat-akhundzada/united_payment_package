@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "unitedpayment"
+name = "united_payment"
 version = "0.1.0"
 description = "A Python package for easy integration with the UnitedPayment API, simplifying payment processing and transaction management. It offers a user-friendly interface, comprehensive documentation, and built-in tests, making integration effortless for developers."
 authors = ["Nijat-Akhundzada <nicataxundzada@gmail.com>"]
