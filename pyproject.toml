@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "unitedpayment"
+version = "0.1.0"
+description = "A Python package for easy integration with the UnitedPayment API, simplifying payment processing and transaction management. It offers a user-friendly interface, comprehensive documentation, and built-in tests, making integration effortless for developers."
+authors = ["Nijat-Akhundzada <nicataxundzada@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
