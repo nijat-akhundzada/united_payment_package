@@ -93,23 +93,6 @@ class UnitedPaymentAPI:
             'Content-Type': 'application/json'
         }
 
-    def parse_response(self, response: requests.Response) -> dict[str, str]:
-        '''
-        Parse the text response from the API.
-
-        Args:
-            response (requests.Response): The response object.
-
-        Returns:
-            Dict[str, str]: Parsed response as a dictionary.
-        '''
-        result = response.text.strip()
-        parsed_result = {}
-        for line in result.split('\n'):
-            if ': ' in line:
-                key, value = line.split(': ', 1)
-                parsed_result[key.strip()] = value.strip()
-        return parsed_result
 
     def handle_response_errors(self, response: requests.Response) -> None:
         '''
@@ -163,7 +146,7 @@ class UnitedPaymentAPI:
                 response = requests.post(url, headers=headers, json=data)
 
             self.handle_response_errors(response)
-            return self.parse_response(response)
+            return response.json()
         except requests.RequestException as e:
             raise UnitedPaymentAPIException(f'Request failed: {str(e)}')
 
